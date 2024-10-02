@@ -1,0 +1,125 @@
+
+.chordSection {
+    display: flex;    
+    height: 400px;
+}
+
+.churchScales {
+    grid-area: scales;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex:  0 150px;
+    height: 100%;
+    background-color: green;
+}
+
+.churchScale {
+    padding: 10px;
+}
+
+.chordGridHolder {
+    grid-area: chords;
+
+    position: relative;
+    /* background-color: lightblue; */
+    flex:  1 0 400px;
+}
+
+.chordGrid {
+    display: flex;
+    height: 100%;
+}
+
+.gridCol {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50px;
+    height: 100%;
+    z-index: 2;
+}
+
+.lineGrid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+
+}
+
+.bgLine {
+    padding: 10px;
+    flex: 1 0 20px;
+    width: 100%;
+
+}
+
+.bgLine::after {
+    display: inline-block;
+    content:'';
+    width: 100%;
+    height: 10px;
+    transform: translateY(50%);
+    background-color: var(--colBlack);
+}
+
+
+
+#I-maj { flex: 2 }
+#I-dom { flex: 1 }
+#I-min { flex: 3 }
+#I-halfdim { flex: 1 }
+
+#II-dom { flex: 1 }
+#II-min { flex: 3 }
+#II-halfdim { flex: 1 }
+#IIb-maj { flex: 2 }
+
+#III-min { flex: 2 }
+#III-halfdim { flex: 1 }
+#IIIb-maj { flex: 2 }
+#IIIb-dom { flex: 1 }
+#IIIb-min { flex: 1 }
+
+#IVh-halfdim { flex: 1 }
+#IV-maj { flex: 2 }
+#IV-dom { flex: 1 }
+#IV-min { flex: 3 }
+
+#V-maj { flex: 1 }
+#V-dom { flex: 1 }
+#V-min { flex: 3 }
+#V-halfdim { flex: 1 }
+#Vb-maj { flex: 1 }
+
+#VI-min { flex: 3 }
+#VI-halfdim { flex: 1 }
+#VIb-maj { flex: 2 }
+#VIb-dom { flex: 1 }
+
+#VII-min { flex: 1 }
+#VII-halfdim { flex: 1 }
+#VIIb-maj { flex: 2 }
+#VIIb-dom { flex: 1 }
+#VIIb-min { flex: 2 }
+
+.romanI:hover { background-color: var(--colOne);}
+.romanII:hover { background-color: var(--colTwo);}
+.romanIII:hover { background-color: var(--colThree);}
+.romanIV:hover { background-color: var(--colFour);}
+.romanV:hover { background-color: var(--colFive);}
+.romanVI:hover { background-color: var(--colSix);}
+.romanVII:hover { background-color: var(--colSeven);}
+
+
+
+
+
+
+
+

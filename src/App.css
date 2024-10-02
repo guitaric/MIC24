@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --colOne: #ff5c5c;
+    --colTwo: #ffb361;
+    --colThree: #fff271;
+    --colFour: #9aff6c;
+    --colFive: #7ed6ff;
+    --colSix: #4864fd;
+    --colSeven: #a45eff;
+    --colTen: silver;
+    --colEleven: goldenrod;
+    --colTwelve: rgb(126, 54, 13);
+    --colBlack: rgb(58, 58, 58);
+}
+
+
+
+.superGrid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 150px 2fr 2fr 1fr 1fr;
+    grid-template-rows: 50px 2fr 2fr;
+    grid-template-areas:
+    "header header header header header"
+    /* ". roman roman . ." */
+    "scale chords chords altChords altChords"
+    "controls sequencer sequencer player player"
+
+}
+
+.headerSection { grid-area: header; background-color: lightblue; }
+.romanSection { grid-area: roman; background-color: lightcoral; }
+.scaleSection { grid-area: scale; background-color: lightcoral; }
+.chordSection { grid-area: chords; background-color: lightyellow; }
+.altChordSection { grid-area: altChords; background-color: lightpink; }
+.controlsSection { grid-area: controls; background-color: lightgoldenrodyellow; }
+.sequencerSection { grid-area: sequencer; background-color:lightsalmon ; }
+.playerSection { grid-area: player; background-color: lightseagreen; }
+
+
+
+
+.df {
+    display: flex;
+}
+
+
+
+.chordButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 5px;
+    background-color: var(--colBlack);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chordButton:hover {
+    transform: scale(1.05);
+    transition-duration: 100ms;
+    color: black;
+}
+

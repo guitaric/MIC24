@@ -1,0 +1,146 @@
+
+
+.altChordSection {
+    grid-area: altChords;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.altChordSecSection {
+    display: flex;
+}
+
+.augAndDim {
+    display: flex;
+}
+
+.augBlock {
+    flex: 1;
+}
+
+.dimBlock {
+    flex: 1;
+}
+
+.altChordSecCol {
+    flex: 1 0 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.altChordSecCol .chordButton:first-child {
+    position: relative  
+}
+
+.altChordSecCol .chordButton:first-child::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 10px;
+    background-color: var(--colBlack);
+
+}
+
+.altChordAugCol .chordButton:first-child {
+    position: relative  
+}
+
+.altChordAugCol .chordButton:first-child::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--colBlack);
+
+}
+.altChordAugCol1 .chordButton {
+    position: relative  
+}
+
+.altChordAugCol1 .chordButton::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 10px;
+    background-color: var(--colBlack);
+
+}
+
+.altChordDimCol2 .chordButton {
+    position: relative  
+}
+
+.altChordDimCol2 .chordButton::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 10px;
+    background-color: var(--colBlack);
+
+}
+.altChordDimCol2 .chordButton:first-child {
+    position: relative  
+}
+
+.altChordDimCol2 .chordButton:first-child:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 12px;
+    background-color: var(--colBlack);
+
+}
+
+.altChordAugSection {
+    display: flex;
+}
+
+.altChordAugCol {
+    flex: 1 0 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.altChordDimSection {
+    display: flex;
+}
+
+.altChordDimCol {
+    flex: 1 0 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.altChordSecCol {
+    flex: 1 0 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.altChordButton {
+    flex: 1 0 50px;
+}
+
+.secChordButton:hover { background-color: var(--colTen);}
+.augChordButton:hover { background-color: var(--colEleven);}
+.dimChordButton:hover { background-color: var(--colTwelve);}
