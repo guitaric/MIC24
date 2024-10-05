@@ -2,7 +2,7 @@ import React from 'react';
 
 const AltChordGrid: React.FC = () => {
   return (
-    <div className='altChordSection'>
+    <div className='altChordSection section'>
 
         <div className="secBlock">
 
@@ -36,33 +36,33 @@ const AltChordGrid: React.FC = () => {
                 </div>
             </div>
         </div>
-
+        <br />
 
         <div className="augAndDim">
 
             <div className="augBlock">
-                <div className="h2">Augmented Chords</div>
+                <div className="h2">Augmented</div>
                 <div className='altChordAugSection'>
                     <div className='altChordAugCol1 altChordAugCol'>
-                        <div id='augC' className='augChordButton altChordButton chordButton'>C</div>
-                        <div id='augCh' className='augChordButton altChordButton chordButton'>C#/Db</div>
+                        <div id='augC' className='augChordButton altChordButton chordButton'>Caug</div>
+                        <div id='augCh' className='augChordButton altChordButton chordButton'>C#aug</div>
                     </div>
                     <div className='altChordAugCol2 altChordAugCol'>
-                        <div id='augD' className='augChordButton altChordButton chordButton'>D</div>
-                        <div id='augDh' className='augChordButton altChordButton chordButton'>D#/Eb</div>
+                        <div id='augD' className='augChordButton altChordButton chordButton'>Daug</div>
+                        <div id='augDh' className='augChordButton altChordButton chordButton'>D#aug</div>
                     </div>
                 </div>
             </div>
 
             <div className="dimBlock">
-                <div className="h2">Diminished Chords</div>
+                <div className="h2">Diminished</div>
                 <div className='altChordDimSection'>
                     <div className='altChordDimCol1 altChordDimCol'>
-                        <div id='dimC' className='dimChordButton altChordButton chordButton'>C</div>
+                        <div id='dimC' className='dimChordButton altChordButton chordButton'>C°</div>
                     </div>
                     <div className='altChordDimCol2 altChordDimCol'>
-                        <div id='dimF' className='dimChordButton altChordButton chordButton'>F</div>
-                        <div id='dimG' className='dimChordButton altChordButton chordButton'>G</div>
+                        <div id='dimF' className='dimChordButton altChordButton chordButton'>F°</div>
+                        <div id='dimG' className='dimChordButton altChordButton chordButton'>G°</div>
                     </div>
                 </div>
             </div>

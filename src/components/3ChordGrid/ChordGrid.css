@@ -1,17 +1,27 @@
 
 .chordSection {
-    display: flex;    
-    height: 400px;
+    display: flex;  
+    flex-direction: column;  
 }
 
-.churchScales {
-    grid-area: scales;
+
+
+.romanHolder {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex:  0 150px;
-    height: 100%;
-    background-color: green;
+    justify-content: space-around;
+    padding: 6px 0;
+    margin-bottom: 10px;
+}
+
+.roman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    border: 1px solid black;
+    padding: 4px;
 }
 
 .churchScale {

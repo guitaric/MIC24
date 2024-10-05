@@ -1,5 +1,4 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -7,9 +6,37 @@
   color: black;
   background-color: white;
 
+  font-family: 'Kod-reg', Inter;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.h2 {
+  
+  font-family: 'Kod-reg', Inter;
+}
+
+
+@font-face {
+  font-family: 'kod-reg';
+  src: url('./assets/fonts/Kodchasan-Regular.woff2') format('woff2'),
+       url('./assets/fonts/Kodchasan-Regular.woff') format('woff');
+  font-weight: normal;  /* Adjust if needed: normal, bold, etc. */
+  font-style: normal;   /* Adjust if needed: normal, italic, etc. */
+}
+@font-face {
+  font-family: 'kod-med';
+  src: url('./assets/fonts/Kodchasan-Medium.woff2') format('woff2'),
+       url('./assets/fonts/Kodchasan-Medium.woff') format('woff');
+  font-weight: normal;  /* Adjust if needed: normal, bold, etc. */
+  font-style: normal;   /* Adjust if needed: normal, italic, etc. */
+}
+@font-face {
+  font-family: 'kod-light';
+  src: url('./assets/fonts/Kodchasan-Light.woff2') format('woff2'),
+       url('./assets/fonts/Kodchasan-Light.woff') format('woff');
+  font-weight: 300;  /* Adjust if needed: normal, bold, etc. */
+  font-style: normal;   /* Adjust if needed: normal, italic, etc. */
+}

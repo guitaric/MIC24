@@ -2,7 +2,11 @@ import React from 'react';
 
 const Sequencer: React.FC = () => {
   return (
-    <div className='sequencerSection'>
+    <div className='sequencerSection section'>
+
+      <div className="info infoSequencer">i</div>
+
+      <h2 className="h2">Sequencer</h2>
 
       <div className="sequencerHolder">
 

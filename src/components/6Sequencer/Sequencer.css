@@ -1,22 +1,27 @@
 .seqRow {
     display: flex;
     gap: 10px;
+    margin: 0 5px;
 }
 
 
 .seqName {
-    flex: 0 0 100px
+    flex: 0 0 120px;
+    display: flex;
+    align-items: center;
 }
 
 .seqBoxes {
     display: flex;
     gap: 5px;
     margin-bottom: 5px;
+
+    width: 100%;
 }
 
 .seqElem {
-    width: 30px;
-    height: 30px;
+    width: calc(100% * 1/16);
+    aspect-ratio: 1/1;
     background-color: white;
     border: 1px solid var(--colBlack);
     border-radius: 2px;

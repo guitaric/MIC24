@@ -1,0 +1,13 @@
+.titleHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+      
+    font-family: 'Kod-med', Inter;
+}
+
+.titleSpan {
+    font-size: 30px;
+    padding: 5px;
+}

@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import './App.css'
 
 import './components/1Header/Header.css';
@@ -18,9 +20,20 @@ import Sequencer from './components/6Sequencer/Sequencer';
 import Player from './components/7Player/Player';
 import Scale from './components/8Scale/Scale';
 
-
+// interface ChordGridProps {
+//   onDoubleClick: (element: string) => void;
+// }
 
 function App() {
+
+  const [playerElems, setPlayerElems] = useState<string[]>([]);
+
+  // Function to handle adding a clicked element to the array
+  const handleDoubleClick = (event: React.MouseEvent) => {
+    setPlayerElems(playerElems =>[...playerElems, event.target.id])
+    console.log(playerElems)
+  }
+
 
   return (
     <> 
@@ -28,11 +41,11 @@ function App() {
         <Header/>
         <Roman/>
         <Scale/>
-        <ChordGrid/>
+        <ChordGrid doubleClick={handleDoubleClick} />
         <AltChordGrid/>
         <Controls/>
         <Sequencer/>
-        <Player/>
+        <Player playerElems={playerElems}/>
       </div>
     </>
   )
