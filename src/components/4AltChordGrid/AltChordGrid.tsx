@@ -1,6 +1,11 @@
 import React from 'react';
+import AltChordButton from '../4.1AltChordButton/AltChordButton';
 
-const AltChordGrid: React.FC = () => {
+interface AltChordGridProps {
+    doubleClick: (event: React.MouseEvent) => void; // Define the prop type for the double-click handler
+  }
+
+const AltChordGrid: React.FC<AltChordGridProps> = ({doubleClick}) => {
   return (
     <div className='altChordSection section'>
 
@@ -9,30 +14,30 @@ const AltChordGrid: React.FC = () => {
             <div className="h2">Secondary Dominants</div>
             <div className='altChordSecSection'>
                 <div className='altChordSecCol1 altChordSecCol'>
-                    <div id='secDomC' className='secChordButton altChordButton chordButton'>C7</div>
-                    <div id='secDomF#' className='secChordButton altChordButton chordButton'>F#7</div>
+                    <AltChordButton id='secDomC' label='C7' altChordType='secChordButton' doubleClick={doubleClick} />
+                    <AltChordButton id='secDomF#' label='F#7' altChordType='secChordButton'  doubleClick={doubleClick} />
                 </div>
                 <div className='altChordSecCol2 altChordSecCol'>
-                    <div id='secDomC#' className='secChordButton altChordButton chordButton'>C#7/Db7</div>
-                    <div id='secDomG' className='secChordButton altChordButton chordButton'>G7</div>
+                    <AltChordButton id='secDomC#'  label='C#7/Db7' altChordType='secChordButton'  doubleClick={doubleClick} />
+                    <AltChordButton id='secDomG'  label='G7' altChordType='secChordButton'  doubleClick={doubleClick} />
                 </div>
                 <div className='altChordSecCol3 altChordSecCol'>
-                    <div id='secDomD' className='secChordButton altChordButton chordButton'>D7</div>
-                    <div id='secDomGh' className='secChordButton altChordButton chordButton'>G#7/Ab7</div>
+                    <AltChordButton id='secDomD'  label='D7' altChordType='secChordButton'  doubleClick={doubleClick} />
+                    <AltChordButton id='secDomGh'  label='G#7/Ab7' altChordType='secChordButton'  doubleClick={doubleClick} />
                 </div>
             </div>
             <div className='altChordSecSection'>
                 <div className='altChordSecCol4 altChordSecCol'>
-                    <div id='secDomD#' className='secChordButton altChordButton chordButton'>D#7/Eb7</div>
-                    <div id='secDomA' className='secChordButton altChordButton chordButton'>A7</div>
+                    <AltChordButton id='secDomD#'  label='D#7/Eb7' altChordType='secChordButton'  doubleClick={doubleClick} />
+                    <AltChordButton id='secDomA'  label='A7' altChordType='secChordButton'  doubleClick={doubleClick} />
                 </div>
                 <div className='altChordSecCol5 altChordSecCol'>
-                    <div id='secDomE' className='secChordButton altChordButton chordButton'>E7</div>
-                    <div id='secDomBb' className='secChordButton altChordButton chordButton'>A#7/Bb7</div>
+                    <AltChordButton id='secDomE'  label='E7' altChordType='secChordButton'  doubleClick={doubleClick} />
+                    <AltChordButton id='secDomBb'  label='A#7/Bb7' altChordType='secChordButton'  doubleClick={doubleClick} />
                 </div>
                 <div className='altChordSecCol6 altChordSecCol'>
-                    <div id='secDomF' className='secChordButton altChordButton chordButton'>F7</div>
-                    <div id='secDomB' className='secChordButton altChordButton chordButton'>B7</div>
+                    <AltChordButton id='secDomF'  label='F7' altChordType='secChordButton'  doubleClick={doubleClick} />
+                    <AltChordButton id='secDomB'  label='B7' altChordType='secChordButton'  doubleClick={doubleClick} />
                 </div>
             </div>
         </div>
@@ -44,12 +49,12 @@ const AltChordGrid: React.FC = () => {
                 <div className="h2">Augmented</div>
                 <div className='altChordAugSection'>
                     <div className='altChordAugCol1 altChordAugCol'>
-                        <div id='augC' className='augChordButton altChordButton chordButton'>Caug</div>
-                        <div id='augCh' className='augChordButton altChordButton chordButton'>C#aug</div>
+                        <AltChordButton id='augC' label='Caug' altChordType='augChordButton'  doubleClick={doubleClick} />
+                        <AltChordButton id='augCh' label='C#aug' altChordType='augChordButton'  doubleClick={doubleClick} />
                     </div>
                     <div className='altChordAugCol2 altChordAugCol'>
-                        <div id='augD' className='augChordButton altChordButton chordButton'>Daug</div>
-                        <div id='augDh' className='augChordButton altChordButton chordButton'>D#aug</div>
+                        <AltChordButton id='augD' label='Daug' altChordType='augChordButton'  doubleClick={doubleClick} />
+                        <AltChordButton id='augDh' label='D#aug' altChordType='augChordButton'  doubleClick={doubleClick} />
                     </div>
                 </div>
             </div>
@@ -58,11 +63,11 @@ const AltChordGrid: React.FC = () => {
                 <div className="h2">Diminished</div>
                 <div className='altChordDimSection'>
                     <div className='altChordDimCol1 altChordDimCol'>
-                        <div id='dimC' className='dimChordButton altChordButton chordButton'>C°</div>
+                        <AltChordButton id='dimC' label='C°' altChordType='dimChordButton'  doubleClick={doubleClick} />
                     </div>
                     <div className='altChordDimCol2 altChordDimCol'>
-                        <div id='dimF' className='dimChordButton altChordButton chordButton'>F°</div>
-                        <div id='dimG' className='dimChordButton altChordButton chordButton'>G°</div>
+                        <AltChordButton id='dimF' label='F°' altChordType='dimChordButton'  doubleClick={doubleClick} />
+                        <AltChordButton id='dimG' label='G°' altChordType='dimChordButton'  doubleClick={doubleClick} />
                     </div>
                 </div>
             </div>

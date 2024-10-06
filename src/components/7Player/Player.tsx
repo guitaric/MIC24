@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Player: React.FC = ({playerElems}) => {
+interface PlayerProps {
+  playerElems: string[];
+}
 
-  const iterations = Array.from({ length: 16 }, (_, index) => index + 1);
+const Player: React.FC<PlayerProps> = ({playerElems}) => {
+
+  const iterations = Array.from({ length: 16 }, (_, index) => index);
 
   return (
     <div className='playerSection section'>
@@ -16,7 +20,6 @@ const Player: React.FC = ({playerElems}) => {
           {iterations.map((iteration) => (
               <div className='playerChord' key={iteration}>{playerElems[iteration]}</div>
           ))}
-
 
         </div>
 

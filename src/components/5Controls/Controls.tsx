@@ -1,6 +1,17 @@
 import React from 'react';
 
-const Controls: React.FC = () => {
+interface ControlProps {
+  playerElems: string[];
+  setPlayerElems: React.Dispatch<React.SetStateAction<string[]>>;
+}
+
+const Controls: React.FC<ControlProps> = ({playerElems, setPlayerElems}) => {
+
+  const resetPlayerElems = (event: React.MouseEvent) => {
+    setPlayerElems([])
+  }
+
+
   return (
     <div className='controlsSection section'>
 
@@ -9,7 +20,7 @@ const Controls: React.FC = () => {
       <h2 className="h2">Controls</h2>
 
       <button className="playButton">Play</button> <br /> 
-      <button className="clearButton">Clear</button> <br /> <br />
+      <button className="clearButton" onClick={resetPlayerElems}>Clear</button> <br /> <br />
 
       <label htmlFor="bpm">BPM</label> <br />
       <select name="bpm" id="bpm">

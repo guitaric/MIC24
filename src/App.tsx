@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './App.css'
 
@@ -20,9 +20,7 @@ import Sequencer from './components/6Sequencer/Sequencer';
 import Player from './components/7Player/Player';
 import Scale from './components/8Scale/Scale';
 
-// interface ChordGridProps {
-//   onDoubleClick: (element: string) => void;
-// }
+
 
 function App() {
 
@@ -31,8 +29,11 @@ function App() {
   // Function to handle adding a clicked element to the array
   const handleDoubleClick = (event: React.MouseEvent) => {
     setPlayerElems(playerElems =>[...playerElems, event.target.id])
-    console.log(playerElems)
   }
+
+  // useEffect(() => {
+  //   console.log('Updated playerElems:', playerElems);
+  // }, [playerElems]);
 
 
   return (
@@ -42,11 +43,12 @@ function App() {
         <Roman/>
         <Scale/>
         <ChordGrid doubleClick={handleDoubleClick} />
-        <AltChordGrid/>
-        <Controls/>
+        <AltChordGrid doubleClick={handleDoubleClick} />
+        <Controls playerElems={playerElems} setPlayerElems={setPlayerElems}/>
         <Sequencer/>
         <Player playerElems={playerElems}/>
       </div>
+      <footer>© 2024 Taric Lallai. All Rights Reserved.</footer>
     </>
   )
 }

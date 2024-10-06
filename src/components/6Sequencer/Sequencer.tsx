@@ -1,6 +1,12 @@
 import React from 'react';
+import sequencerData from './sequencerData';
+import SequencerElem from '../6.1SequencerElem/SequencerElem';
+
 
 const Sequencer: React.FC = () => {
+
+  const iterations = Array.from({ length: 16 }, (_, index) => index);
+
   return (
     <div className='sequencerSection section'>
 
@@ -10,135 +16,18 @@ const Sequencer: React.FC = () => {
 
       <div className="sequencerHolder">
 
-          <div className="seqRow">
-            <div className="seqName">Chord</div>
-            <div className="seqBoxes">
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-            </div>
+        {sequencerData.map((column, colIndex) => (
+          <div key={colIndex}>
+              <div className="seqRow">
+                <div className="seqName">{sequencerData[colIndex]}</div>
+                <div className="seqBoxes">
+                  {iterations.map((iteration) => (
+                    <SequencerElem key={iteration} />
+                  ))} 
+                </div>
+              </div>
           </div>
-
-          <div className="seqRow">
-            <div className="seqName">Bass note</div>
-            <div className="seqBoxes">
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-            </div>
-          </div>
-
-          <div className="seqRow">
-            <div className="seqName">Open Hi-hat</div>
-            <div className="seqBoxes">
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-            </div>
-          </div>
-          <div className="seqRow">
-            <div className="seqName">Closed Hi-hat</div>
-            <div className="seqBoxes">
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-            </div>
-          </div>
-
-          <div className="seqRow">
-            <div className="seqName">Snare</div>
-            <div className="seqBoxes">
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-            </div>
-          </div>
-          <div className="seqRow">
-            <div className="seqName">Kick</div>
-            <div className="seqBoxes">
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-              <div className="seqElem checkbox"></div>
-            </div>
-          </div>
+        ))}
 
       </div>
 
