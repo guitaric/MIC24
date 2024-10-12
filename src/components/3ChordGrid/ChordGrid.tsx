@@ -31,6 +31,8 @@ const ChordGrid: React.FC<ChordGridProps> = ({doubleClick}) => {
                 <ChordButton 
                     key={chord.id} 
                     id={chord.id} 
+                    note={chord.note}
+                    type={chord.type}
                     className={chord.className} 
                     name={chord.name} 
                     onDoubleClick={doubleClick} 

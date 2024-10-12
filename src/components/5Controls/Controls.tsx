@@ -1,15 +1,14 @@
-import React from 'react';
 
 interface ControlProps {
-  playerElems: string[];
+  togglePlay: () => void,
+  isPlaying: boolean,
+  setIsPlaying: React.Dispatch<React.SetStateAction<boolean>>;
   setPlayerElems: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const Controls: React.FC<ControlProps> = ({playerElems, setPlayerElems}) => {
+const Controls: React.FC<ControlProps> = ({togglePlay, isPlaying, setPlayerElems}) => {
 
-  const resetPlayerElems = (event: React.MouseEvent) => {
-    setPlayerElems([])
-  }
+  const resetPlayerElems = () => {setPlayerElems([])}
 
 
   return (
@@ -19,7 +18,7 @@ const Controls: React.FC<ControlProps> = ({playerElems, setPlayerElems}) => {
 
       <h2 className="h2">Controls</h2>
 
-      <button className="playButton">Play</button> <br /> 
+      <button className="playButton" onClick={togglePlay}>{isPlaying ? 'Pause' : 'Play'}</button> <br /> 
       <button className="clearButton" onClick={resetPlayerElems}>Clear</button> <br /> <br />
 
       <label htmlFor="bpm">BPM</label> <br />
