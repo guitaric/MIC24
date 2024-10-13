@@ -1,6 +1,6 @@
 import React from 'react';
 import chordData from './chordData';
-import ChordButton from '../3.1ChordButton/ChordButton';
+import ChordButton from './ChordButton';
 
 interface ChordGridProps {
   doubleClick: (event: React.MouseEvent) => void; // Define the prop type for the double-click handler

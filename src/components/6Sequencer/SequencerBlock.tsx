@@ -1,5 +1,5 @@
 // ChordButton.tsx
-import SequencerElem from '../6.1SequencerElem/SequencerElem';
+import SequencerElem from './SequencerElem';
 
 interface SequencerElemProps {
     name: string,

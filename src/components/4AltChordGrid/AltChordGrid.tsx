@@ -1,5 +1,5 @@
 import React from 'react';
-import AltChordButton from '../4.1AltChordButton/AltChordButton';
+import AltChordButton from './AltChordButton';
 
 interface AltChordGridProps {
     doubleClick: (event: React.MouseEvent) => void; // Define the prop type for the double-click handler
