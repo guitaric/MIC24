@@ -6,7 +6,6 @@ export function chordMaker(root: number, type: string) {
   if(chordArray != undefined) {
     let chordType = chordArray.distance
     let chordNumbers = chordType.map(elem => elem + root + 48)
-    console.log(chordNumbers)
     let returnChord : string[] = [];
     chordNumbers.forEach(elem => {
       const note = pianoNotes.find(note => note.id === elem);

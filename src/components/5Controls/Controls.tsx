@@ -6,9 +6,12 @@ interface ControlProps {
   setPlayerElems: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const Controls: React.FC<ControlProps> = ({togglePlay, isPlaying, setPlayerElems}) => {
+const Controls: React.FC<ControlProps> = ({togglePlay, isPlaying, setIsPlaying, setPlayerElems}) => {
 
-  const resetPlayerElems = () => {setPlayerElems([])}
+  const resetPlayerElems = () => {
+    setPlayerElems([]);
+    setIsPlaying(false);
+  }
 
 
   return (

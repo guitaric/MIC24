@@ -1,24 +1,23 @@
-// ChordButton.tsx
-import React from 'react';
+// import React, {  } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 
 interface SequencerElemProps {
-  switchChecked: (event: React.MouseEvent) => string;
+  toggleChecked: () => void; 
+  checkedArray: boolean;
+  setCheckedArray: Dispatch<SetStateAction<boolean[]>>; 
 }
 
-  const SequencerElem: React.FC<SequencerElemProps> = () => {
+  const SequencerElem: React.FC<SequencerElemProps> = ({checkedArray, toggleChecked}) => {
   
-    const switchChecked = (event: React.MouseEvent) => {
-      const target = event.currentTarget as HTMLElement;
-
-      if (target.classList.contains('checked')) {
-        target.classList.remove('checked');
-      } else {
-        target.classList.add('checked');
-      }
-    }
+    const switchChecked = () => {
+      toggleChecked(); // Call the parent's toggleChecked function
+    };
 
     return (
-      <div className='seqElem checkbox' onClick={switchChecked}></div>
+      <div 
+        className={`seqElem checkbox ${checkedArray ? "checked" : ""}`} 
+        onClick={switchChecked}>
+      </div>
     );
 };
 
